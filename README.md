@@ -120,7 +120,8 @@ make clean
 make -j8
 ```
 
-* **Add Test Image**: for testing purpose, move or copy the image ```img_README/Abyssinian_1.jpg``` under the root directory of this repo to ```/darknet/data```
+* **Add Test Image**: for testing purpose, move or copy the image ```img_README/Abyssinian_1.jpg``` under the root directory of this repo to ```/darknet/data```.
+
 ![alt text](https://github.com/pikapikasecoy/pet_breed_recognition_yolo/blob/main/img_README/Abyssinian_1.jpg)
 
 * **Test**: To test YOLO, run the following command which specifies the configuration files and weights, as well as the image you'd like to detect. Please replace the weight file if you've trained your own one.
