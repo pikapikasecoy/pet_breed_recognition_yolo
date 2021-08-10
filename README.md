@@ -24,7 +24,9 @@ cd darknet
 make
 ```
 * **Step 2**: Download Pretrained Convolutional Weights of Yolo-v3.
-```wget https://pjreddie.com/media/files/darknet53.conv.74```
+```
+wget https://pjreddie.com/media/files/darknet53.conv.74
+```
 
 * **Step 3**: Generate Label Files
 [pet_label.py](https://github.com/pikapikasecoy/pet_breed_recognition_yolo/blob/763be5413623438680ac9dd3f87a59f9b178d077/pet_label.py) was created to create annotations and generate labels. Since our dataset provides images with annotations, so in this step, we will only use generate function to generate label files directly with following command.
