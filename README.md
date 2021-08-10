@@ -123,7 +123,7 @@ make -j8
 * **Add Test Image**: for testing purpose, move or copy the image ```img_README/Abyssinian_1.jpg``` under the root directory of this repo to ```/darknet/data```
 
 
-* **Test**: To test YOLO, run the following command which specifies the configuration files and weights, as well as the image you'd like to detect
+* **Test**: To test YOLO, run the following command which specifies the configuration files and weights, as well as the image you'd like to detect. Please replace the weight file if you've trained your own one.
 ```
 ./darknet detector test cfg/pet.data cfg/yolov2-tiny-pet_40000.cfg yolov2-tiny-pet_40000.weights  data/Abyssinian_1.jpg
 ```
