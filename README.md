@@ -110,7 +110,7 @@ make
 
 * **Download Weight Files**: Download [trained weight file](https://github.com/ideaRunner/yolo-pet/releases/download/0.0.1/yolov2-tiny-pet_40000.weights) mentioned above
 
-* **Add Pet Breed Detection Config Files**: move or copy ```pet.data``` and ```yolov2-tiny-pet_40000.cfg``` under the root directory of this repo to ```darknet/cfg```
+* **Add Pet Breed Detection Config Files**: move or copy ```pet.data``` and ```yolov2-tiny-pet_40000.cfg``` under the root directory of this repo to ```darknet/cfg```, and ```pet.names``` to ```darknet/data```
 
 * **Replace source code**: replace ```yolo.c``` in ```darknet/example``` with ```yolo.c``` under the home directory of this repo. By doing this, we create a new array of labels string containing all pet breed names, and pass it to the function ```draw_detections(im, dets, l.side*l.side*l.n, thresh, pet_names, alphabet, 37)```, which enables YOLO to annotate any detected area with the corresponing pet breed.
 
@@ -121,7 +121,7 @@ make -j8
 ```
 
 * **Add Test Image**: for testing purpose, move or copy the image ```img_README/Abyssinian_1.jpg``` under the root directory of this repo to ```/darknet/data```
-
+![alt text](https://github.com/pikapikasecoy/pet_breed_recognition_yolo/blob/main/img_README/Abyssinian_1.jpg)
 
 * **Test**: To test YOLO, run the following command which specifies the configuration files and weights, as well as the image you'd like to detect. Please replace the weight file if you've trained your own one.
 ```
