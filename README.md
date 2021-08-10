@@ -91,7 +91,7 @@ mkdir darknet/pet_backups
 ```
 
 ## 3. Training
-Use the following commands to train yolo
+The we used the following commands to train yolo
 ```
 cd darknet 
 ./darknet detector train cfg/pet.data cfg/yolov2-tiny-pet_40000.cfg  yolov2-tiny-pet_40000.weights 
