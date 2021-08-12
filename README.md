@@ -23,10 +23,7 @@ git clone https://github.com/pjreddie/darknet
 cd darknet
 make
 ```
-* **Step 2**: Download Pretrained Convolutional Weights of Yolo-v3.
-```
-wget https://pjreddie.com/media/files/darknet53.conv.74
-```
+* **Step 2**: Download [Pretrained Convolutional Weights](https://github.com/ideaRunner/yolo-pet/releases/download/0.0.1/yolov2-tiny-pet_40000.weights) of Yolo-v2.
 
 * **Step 3**: Generate Label Files
 [pet_label.py](https://github.com/pikapikasecoy/pet_breed_recognition_yolo/blob/763be5413623438680ac9dd3f87a59f9b178d077/pet_label.py) was created to create annotations and generate labels. Since our dataset provides images with annotations, so in this step, we will only use generate function to generate label files directly with following command.
@@ -97,10 +94,10 @@ mkdir darknet/pet_backups
 The we used the following commands to train yolo
 ```
 cd darknet 
-./darknet detector train cfg/pet.data cfg/yolov3-pet.cfg  darknet53.conv.74 
+./darknet detector train cfg/pet.data cfg/yolov2-tiny-pet_40000.cfg yolov2-tiny-pet_40000.weights 
 ```
 
-# Test or Use Trained YOLO 
+## 4. Test or Use Trained YOLO 
 
 We can simply apply YOLO to detect pet breed given any jpg image using the [trained weight file](https://github.com/ideaRunner/yolo-pet/releases/download/0.0.1/yolov2-tiny-pet_40000.weights) (60.9MB) provided by [ideaRunner](https://github.com/ideaRunner). Alternatively, we can also test the performance of the weight file trained by ourselves as shown in the previous stages, if it's the case, please jump directly to the ***Test*** step.
 
